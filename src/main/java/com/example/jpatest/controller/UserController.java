@@ -29,9 +29,9 @@ public class UserController {
 
     @GetMapping("/test/login")
     public @ResponseBody String testLogin(Authentication authentication, @AuthenticationPrincipal PrincipalDetails principalDetails){
-        PrincipalDetails principal = (PrincipalDetails) authentication.getPrincipal();
-
-        System.out.println("authentication : " + principal.getUser());
+//        PrincipalDetails principal = (PrincipalDetails) authentication.getPrincipal();
+//
+//        System.out.println("authentication : " + principal.getUser());
         System.out.println(principalDetails.getUser());
         return "세션 정보 확인하기";
     }
